@@ -31,6 +31,16 @@ print("Your name is {}, and your age is {}.".format(name, age)) # a method that 
 print("Your lucky number is {number}, {name}.".format(name=name, number=number)) # a method for formatting the variables in the string.
 print("Your total price is ${:.2f}".format(price) # a method for displaying the variable but with only two decimal places.
 
-x = ["My", "name", "is", "Albraa"] # This is a how a list is made
-"My" in x # This method checks if a certain string is inside a list
-x[0] #How to output a certain string in a list with indexing
+# Lists: Sequences of elements of any type, and are mutable.
+myList = ["My", "name", "is", "Albraa"] # This is a how a list is made
+"My" in myList # This method checks if a certain string is inside a list
+myList[0] #How to output a certain string in a list with indexing
+# If something is said to be mutable, it means it can be changed.
+myList.append("Alsakor") # This method adds the string in quotes to the end of the list.
+myList.insert(0, "Alsakor") # This method adds the string in quotes to the specific location without deleting the string that was there, but rather pushes the list
+myList.remove("Alsakor") # This method removes the string from the list no matter the position.
+myList.pop(3) # This method removes the string in index number 3 (4th string)
+myList[n] = "Alsakor" #This method replaces the string at index n with the string in quotes.
+
+# Tuples: just like lists but they are immutable (cant be changed).
+myTuple = ("cat", "horse", "dog") #tuples are declared the same way except you use paranthesis "()"
