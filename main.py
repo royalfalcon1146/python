@@ -30,3 +30,7 @@ string[::-1] # a method that outputs the reverse of a string
 print("Your name is {}, and your age is {}.".format(name, age)) # a method that replaces the first "{}" with the first argument in the format operation and so on.
 print("Your lucky number is {number}, {name}.".format(name=name, number=number)) # a method for formatting the variables in the string.
 print("Your total price is ${:.2f}".format(price) # a method for displaying the variable but with only two decimal places.
+
+x = ["My", "name", "is", "Albraa"] # This is a how a list is made
+"My" in x # This method checks if a certain string is inside a list
+x[0] #How to output a certain string in a list with indexing
