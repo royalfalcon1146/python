@@ -44,3 +44,6 @@ myList[n] = "Alsakor" #This method replaces the string at index n with the strin
 
 # Tuples: just like lists but they are immutable (cant be changed).
 myTuple = ("cat", "horse", "dog") #tuples are declared the same way except you use paranthesis "()"
+# Since a function returns a tuple, you can assign variables to the output the function gives
+result = myFunction() # Let's say this function returns a tuple with three values
+A, B, C = result # Here you are assigning the variables to the corresponding strings in the returning tuple
