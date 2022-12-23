@@ -47,3 +47,13 @@ myTuple = ("cat", "horse", "dog") #tuples are declared the same way except you u
 # Since a function returns a tuple, you can assign variables to the output the function gives
 result = myFunction() # Let's say this function returns a tuple with three values
 A, B, C = result # Here you are assigning the variables to the corresponding strings in the returning tuple
+
+for x in myList:
+      print(x) #here with a loop you can get every object in the list and do something with it
+      
+for num, obj in enumerate(myList):
+      print(num + "-" + obj) #here the first variable takes the index number of the object and the second one takes the value of the object itself.
+      
+myList = [ x*3 for x in range(1,101)] #here instead of making the loop, it made it shorter, here it takes x*3 of every number from the range.
+myList = [ x for x in range(1,101) if x%3 == 0] #here it does the same thing except there is a condition met.
+      
