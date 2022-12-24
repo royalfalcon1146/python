@@ -63,3 +63,4 @@ for num, obj in enumerate(myList):
 myList = [ x*3 for x in range(1,101)] #here instead of making the loop, it made it shorter, here it takes x*3 of every number from the range.
 myList = [ x for x in range(1,101) if x%3 == 0] #here it does the same thing except there is a condition met.
       
+myDict = {} #This is a dictionary
