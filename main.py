@@ -41,6 +41,12 @@ myList.insert(0, "Alsakor") # This method adds the string in quotes to the speci
 myList.remove("Alsakor") # This method removes the string from the list no matter the position.
 myList.pop(3) # This method removes the string in index number 3 (4th string)
 myList[n] = "Alsakor" #This method replaces the string at index n with the string in quotes.
+myList.sort() #sorts he items in the list
+myList.reverse() #reverses the order of the list
+myList.clear() #removes all the items of the list
+myList.copy() #creates a copy of the list
+myList.extend(other_list) #adds/appends all the items in the list in the paranthesis to "myList"
+
 
 # Tuples: just like lists but they are immutable (cant be changed).
 myTuple = ("cat", "horse", "dog") #tuples are declared the same way except you use paranthesis "()"
