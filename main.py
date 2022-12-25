@@ -2,6 +2,9 @@
 #In programming, recursion is a way of doing a repetitive task by having a function call itself.
 #Recursion in python can only happen 1000 times in each function when called.
 
+n = 1
+m = 8
+string = "I am a genius"
 string[n] #this shows the nth character from a string, ofc starting from number 0
 string[-1] #when there is a negative number, it starts from the end of the string starting with the number -1
 
@@ -27,8 +30,10 @@ string.isnumeric() # a method that checks if the string is a numerical value.
 string.join(["This", "is", "a", "sentence"]) # a method that outputs the list of words with the string between them.
 string.split() # a method that outputs a list of all the words in the string.
 string[::-1] # a method that outputs the reverse of a string
+name, age = "Albraa", 18
 print("Your name is {}, and your age is {}.".format(name, age)) # a method that replaces the first "{}" with the first argument in the format operation and so on.
 print("Your lucky number is {number}, {name}.".format(name=name, number=number)) # a method for formatting the variables in the string.
+price = 98
 print("Your total price is ${:.2f}".format(price)) # a method for displaying the variable but with only two decimal places.
 
 # Lists: Sequences of elements of any type, and are mutable.
@@ -47,7 +52,8 @@ myList.clear() #removes all the items of the list
 myList.copy() #creates a copy of the list
 myList.extend(other_list) #adds/appends all the items in the list in the paranthesis to "myList"
 
-
+def myFunction():
+      print("something")
 # Tuples: just like lists but they are immutable (cant be changed).
 myTuple = ("cat", "horse", "dog") #tuples are declared the same way except you use paranthesis "()"
 # Since a function returns a tuple, you can assign variables to the output the function gives
@@ -68,4 +74,14 @@ myDictionary = { #This is a dictionary, in a dictionary you access things with t
       "age": 18,
       "phone": 5370623850
 } 
-print(myDictionary.name)
+myDictionary["name"] #This accesses the value of "name" in the dictionary
+myDictionary["name"] = "Ahmad" #This changes the value of "name" in dictionary
+myDictionary["newKey"] = 18 #here you made a new field with a value in it
+"age" in myDictionary #here it sees if there is such a field/key in the dictionary and returns a boolean
+del myDictionary["phone"] #this deletes the field in the square brackets
+for n in myDictionary:
+      print(n) #this prints the name of the field and not its value
+      print(myDictionary[n]) #this prints the value of that field in the dictionary
+
+myDictionary.keys() #this method gives you the names of the fields in the dictionary
+myDictionary.values() #this method gives you the values only in the dictionary 

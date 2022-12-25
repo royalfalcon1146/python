@@ -1,7 +1,6 @@
-#This is for testing and not taking notes, here is the place I fight my challenges.
-myUser = {
-    "name": "Mohammed",
-    "age": 25,
-    "religion": "Islam"
+myFile = {
+    "name": "testing", "size": 2000, "date": "25/12/2022"
 }
-print(myUser.name)
+
+for n in myFile:
+    print("{} : {}".format(n, myFile[n]))
