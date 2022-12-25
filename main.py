@@ -29,7 +29,7 @@ string.split() # a method that outputs a list of all the words in the string.
 string[::-1] # a method that outputs the reverse of a string
 print("Your name is {}, and your age is {}.".format(name, age)) # a method that replaces the first "{}" with the first argument in the format operation and so on.
 print("Your lucky number is {number}, {name}.".format(name=name, number=number)) # a method for formatting the variables in the string.
-print("Your total price is ${:.2f}".format(price) # a method for displaying the variable but with only two decimal places.
+print("Your total price is ${:.2f}".format(price)) # a method for displaying the variable but with only two decimal places.
 
 # Lists: Sequences of elements of any type, and are mutable.
 myList = ["My", "name", "is", "Albraa"] # This is a how a list is made
@@ -63,4 +63,9 @@ for num, obj in enumerate(myList):
 myList = [ x*3 for x in range(1,101)] #here instead of making the loop, it made it shorter, here it takes x*3 of every number from the range.
 myList = [ x for x in range(1,101) if x%3 == 0] #here it does the same thing except there is a condition met.
       
-myDict = {} #This is a dictionary
+myDictionary = { #This is a dictionary, in a dictionary you access things with their keys/values
+      "name": "Albraa",
+      "age": 18,
+      "phone": 5370623850
+} 
+print(myDictionary.name)
