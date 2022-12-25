@@ -85,3 +85,8 @@ for n in myDictionary:
 
 myDictionary.keys() #this method gives you the names of the fields in the dictionary
 myDictionary.values() #this method gives you the values only in the dictionary 
+
+#Set: Used when you want to store a bunch of elements and be crtain that they're only present once. They are also immutable
+
+
+
