@@ -87,6 +87,25 @@ myDictionary.keys() #this method gives you the names of the fields in the dictio
 myDictionary.values() #this method gives you the values only in the dictionary 
 
 #Set: Used when you want to store a bunch of elements and be crtain that they're only present once. They are also immutable
+#OOP: Stands for Object Oriented Programming and is a way of thinking about and implementing our code.
+#It also means a flexible, powerful paradigm where classes represent and define concepts, while objects are instances of classes.
+#The attributes are the characteristics associated to a type.
+#The methods are the functions associated to a type.
+anyobject = ""
+dir(anyobject) #this here shows you all the methods associated with this type of data
+help(anyobject) #this shows you how to use those methods represented in the dir method for the specific data type
+
+class myClass: #this is how you declare a new class
+      pass #it is a good habbit to start a class name with a capital letter
+      anyString = ""
+#writing pass in a block just makes python ignore the error of nothing being there
+#to access the class, you have to make an instance of it
+myClassInstance = myClass()
+myClassInstance.anyString #here you have accessessed the string inside the class
+myClassInstance.anyString = "green apples" #here I changed the variable value of the instance, not the class itself
+#Dot Notation: lets you access any of the abilities the object might have (called methods) or information it might store (called attributes)
+#Different instances can have different values
+
 
 
 
