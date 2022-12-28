@@ -98,6 +98,8 @@ help(anyobject) #this shows you how to use those methods represented in the dir 
 class myClass: #this is how you declare a new class
       pass #it is a good habbit to start a class name with a capital letter
       anyString = ""
+      def somefun(self):
+            print(self.anyString) #here we put self.anyString to access the string in the class itself
 #writing pass in a block just makes python ignore the error of nothing being there
 #to access the class, you have to make an instance of it
 myClassInstance = myClass()
@@ -105,7 +107,22 @@ myClassInstance.anyString #here you have accessessed the string inside the class
 myClassInstance.anyString = "green apples" #here I changed the variable value of the instance, not the class itself
 #Dot Notation: lets you access any of the abilities the object might have (called methods) or information it might store (called attributes)
 #Different instances can have different values
+myClassInstance.somefun() #this is how you call a function in a class
 
+class anyClass:
+      def __init__(self, name, age): #__init__ is a constructor here, it helps declare variables as soon as you declare an instance
+            self.name = name
+            self.age = age
+anyClassInstance = anyClass( "albraa", 18) #this exaplains comment on line 13
 
+class strClass:
+      def __str__(self):
+            return "hello" #the __str__ constructor allows us to return a string when someone tries to print the class instance itself
 
+#dont forget to use help(something) to konw about more methods concerning the type
+#Docstring: a brief text that explains what something does
+
+def docstr():
+      """hello"""#this is a docstring, when someone calls help(docstr) it will show up
+      print("Hi everyone")
 
