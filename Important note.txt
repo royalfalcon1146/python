@@ -1,1 +1,3 @@
 DO NOT FORGET, THERE ARE INFINITE MODULES AND METHODS FOR EVERYTHING, GO TO PYTHOM MODULE INDEX TO FIND OUT ABOUT ALL MODULES 
+
+To open jupyter just open anaconda powershell and type "jupyter notebook"
