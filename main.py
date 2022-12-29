@@ -86,6 +86,15 @@ for n in myDictionary:
 myDictionary.keys() #this method gives you the names of the fields in the dictionary
 myDictionary.values() #this method gives you the values only in the dictionary 
 
+nestedDict = {
+      "class1" : {
+            "math": 92,
+            "english": 80,
+            "science": 84
+      }
+}
+
+nestedDict["class1"]["math"] #how you access nested dictionaries
 #Set: Used when you want to store a bunch of elements and be crtain that they're only present once. They are also immutable
 #OOP: Stands for Object Oriented Programming and is a way of thinking about and implementing our code.
 #It also means a flexible, powerful paradigm where classes represent and define concepts, while objects are instances of classes.
@@ -126,3 +135,27 @@ def docstr():
       """hello"""#this is a docstring, when someone calls help(docstr) it will show up
       print("Hi everyone")
 
+class Color:
+      def __init__(self, color, hex):
+            self.color = color
+            self.hex = hex
+
+#how to inheret a class
+class Red(Color):
+      pass
+
+class Blue(Color):
+      pass
+
+#the classes Red and BLue both inheret the class Color
+#you can make instances of those classes too and use methods just like you would use on normal classes
+
+#modules: used to organize functions, classes, and other data together in a structured way
+import random #random module
+random.randint(1, 10) #this gives you a random number between 1 and 10
+
+import datetime #datetime module
+now = datetime.datetime.now() #this datetime.datetime.now() gives the date and time of today
+now #outputs the date and time together 
+now.year #this shows which year it is
+now.month #this shows which month it is
