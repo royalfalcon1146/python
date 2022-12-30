@@ -3,6 +3,7 @@ import fileupload
 import io
 import sys
 
+#Make sure to download the above modules first!
 #This shows how you can upload a file to python, it displays a widget for you to open your txt file with!
 #The contents of the file are stored in a string called: file_contents
 
