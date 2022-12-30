@@ -1,4 +1,5 @@
-#Waiting for a challenge to come
+#This code opens a window to select a file to read every line of.
+#If the user doesnt select a file, an error will happen, just put a try and except method :)
 import tkinter as tk
 from tkinter import filedialog
 
