@@ -159,3 +159,5 @@ now = datetime.datetime.now() #this datetime.datetime.now() gives the date and t
 now #outputs the date and time together 
 now.year #this shows which year it is
 now.month #this shows which month it is
+
+#Event Class: contains the date when the event happened, the name of the machine where it happened, the user involved, and the event type.
