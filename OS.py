@@ -10,3 +10,10 @@ def close_program(pid):
 
 # Example usage
 close_program(1234)
+
+#--------------------------------------------------------------------------------------------------
+
+# Executing a command in cmd from python
+import os
+cmd = "shutdown/p" #here is where you write your code in the double quotes
+subprocess.run(cmd, shell=True)
