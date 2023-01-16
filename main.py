@@ -172,13 +172,13 @@ file.close() #it is a good habbit to close files since it takes ram to keep them
 
 for line in file: pass #this does something with every line, maybe print or anything you like
 
-with open(r"C:\Users\ALBARAA.DESKTOP-87EJ24R\Programming\Tests Folder\myTxtFile.txt"): #using the "with" here, we don't have to worry about closing the file, it closes it after it does the tasks
+with open(r"C:\Users\ALBARAA.DESKTOP-87EJ24R\Programming\Tests Folder\myTxtFile.txt") as file: #using the "with" here, we don't have to worry about closing the file, it closes it after it does the tasks
       print(file.read().strip())
       lines = file.readlines() #this stores every line in a string in a list called "lines"
 
 #use "with" if you are using the file for a small period, if you want to use it for the whole time, just keep it open
 
-with open(r"C:\Users\ALBARAA.DESKTOP-87EJ24R\Programming\Tests Folder\myTxtFile.txt", "a"):
+with open(r"C:\Users\ALBARAA.DESKTOP-87EJ24R\Programming\Tests Folder\myTxtFile.txt", "a") as file:
       pass
       file.writeline("my comment") #the writeline function is to write then go to the next line
 
@@ -201,9 +201,15 @@ os.rename("name of the file with extension", "new name.txt") #renames the file
 os.path.exists("my path or file name") #checks if the file is present
 os.path.getsize("name of file / path") #checks for size
 os.path.abspath("name of file / path") #outputs the absolute path of the file, can be used if you are using different systems
+
+import datetime
+timestamp = os.path.getmtime("any file")
+datetime.datetime.fromtimestamp(timestamp) #prints the last time the file was modified in an understandable way :)
+
 os.getcwd() #outputs which directory is selected rn
 os.mkdir("new dir name") #makes a new directory in the current directory
 os.chdir("folder name or its path") #changes to the following directory
+os.chdir('..') #this will go back one driectory
 os.rmdir("folder name / path") #removes the directory only if it is empty!!
 os.listdir("directory name / path") # outputs all the files and directories in the directory
 os.isdir("anything's name / path") # checks if it is a directory
