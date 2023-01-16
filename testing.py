@@ -1,7 +1,6 @@
 # There is no tomorrow!!!
 #! Waiting for a challenge!
-myFile = open(r"C:\Users\ALBARAA.DESKTOP-87EJ24R\Programming\Tests Folder\myTxtFile.txt")
-lines = []
-for line in myFile: lines.append(line.strip())
+import os
 
-print(lines)
+print(os.path.exists(r"C:\Users\ALBARAA.DESKTOP-87EJ24R\Programming\Tests Folder\myTxtFile.txt"))
+

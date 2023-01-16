@@ -6,23 +6,3 @@ from tkinter import filedialog
 root = tk.Tk()
 root.withdraw()
 file_path = filedialog.askopenfilename()
-
-with open(file_path, 'r') as file: #this can only read, because it is set to "r"
-  # Read and process the file contents
-  for line in file:
-    # Do something with each line
-    pass
-
-#!---------------------------------------------------------------------------------------------------------------
-#how to edit a file, you can write on it anything, it first opens a window to select a file, have fun with it
-import tkinter as tk
-from tkinter import filedialog
-
-root = tk.Tk()
-root.withdraw()
-file_path = filedialog.askopenfilename()
-
-
-with open(file_path, "a") as file: #this here is changed from "r" to "a" to edit the file instead of just reading, but while this is on, you cant read it
-  file.write("\n") #start on a new line, just to be careful not to write on an existing file :)
-  file.write("anything you want")
