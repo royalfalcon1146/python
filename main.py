@@ -193,7 +193,7 @@ root = tk.Tk()
 root.withdraw()
 file_path = filedialog.askopenfilename() # this opens a file explorer for the user to choose a folder, then selects that folder in file_path
 
-#! OS section
+#! OS Section
 #* Use "r" before the quotes for paths pretty please
 import os
 os.remove("my.txt") #this removes the file named "my.txt"
@@ -201,6 +201,9 @@ os.rename("name of the file with extension", "new name.txt") #renames the file
 os.path.exists("my path or file name") #checks if the file is present
 os.path.getsize("name of file / path") #checks for size
 os.path.abspath("name of file / path") #outputs the absolute path of the file, can be used if you are using different systems
+
+#! Execute a Command in The Terminal
+os.system("the command here")
 
 import datetime
 timestamp = os.path.getmtime("any file")
@@ -217,3 +220,57 @@ os.isdir("anything's name / path") # checks if it is a directory
 for any in os.listdir("directory name / path"): #this checks for every thing in the directory
       os.path.join("directory name", any) # this outputs the path of "any" from current directory
       pass
+
+#! CSV Files Section
+
+#Parsing: analyzing a file's content to correctly structure the data
+#CSV files: there are files, which apps like excel uses to store data, it stores data and separates it by commas
+
+import csv #the module
+
+f = open("any file.txt")
+csv_f = csv.reader(f) #parsing the file with csv to be readable by the module
+
+for row in csv_f: # the row here is a list, it has the values all in each row of the file, so you can treat it like a list :)
+      name, phone, role = row #here the first colum of that row is stored in name, second in phone, third in role, this is how you unpack the row
+      # for this to work, you have to have the same number of elements on both sides
+      print(name) #this will print the first column of that row
+      pass
+
+myList = [["Name", "Age", "Phone"], ["Albraa", "18", "5370623850"], ["Hanan", "20", "None"]] #using this list, we will make a new csv file
+
+with open("myCsvFile.csv", "w") as file: #! Creating a New CSV File
+      writer = csv.writer(file)
+      writer.writerow(["Name", "Age", "Phone"]) #use with lists
+      writer.writerow(["Albraa", "18", "5370623850"])
+      writer.writerow(["Hanan", "20", "None"])
+      writer.writerows(myList) #use for lists nested in other lists
+
+#! Accessing The CSV File as a Dictionary
+
+with open('myCsv.csv') as file:
+      reader = csv.DictReader(file) #here the method is called DictReader
+      for row in reader:
+            print(row["name"]) #here the first row isnt considered, it is rather used as a key to access all the names!
+
+#! Using a Dictioniary to Write a CSV File
+
+MyDictList = [ #the list of dictionaries we are going to use to make a new csv file
+      {
+            "name": "Albraa",
+            "age": "18",
+            "phone": "5370623850"
+      },
+      {
+            "name": "Hanan",
+            "age": "20",
+            "phone": "none"
+      }
+]
+
+keys = ["name", "age", "phone"] #the first row
+
+with open('myCsvFile.csv', 'w') as file:
+      writer = csv.DictWriter(file, fieldnames = keys) #assigning the file and the first column 
+      writer.writeheader() #creates first line of the file by using the our fieldnames
+      writer.writerows(myDictList) #writes the rows
