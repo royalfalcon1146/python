@@ -274,3 +274,6 @@ with open('myCsvFile.csv', 'w') as file:
       writer = csv.DictWriter(file, fieldnames = keys) #assigning the file and the first column 
       writer.writeheader() #creates first line of the file by using the our fieldnames
       writer.writerows(myDictList) #writes the rows
+
+#! Regular Expressions | Regex
+#* They allow us to search a text for strings matching a specific pattern

@@ -1,0 +1,20 @@
+Regular Expressions | Regex
+They allow us to search a text for strings matching a specific pattern
+
+1. Searching for a document
+    a. Case sensitive.
+    grep {string} {path}
+    b. Not case sensitive
+    grep -i {string} {path}
+
+2. The dot, the dot includes any letter that matches it 
+    a. here we are searching for words ending with "me" and starting with "d" and it is a 4 letter word 
+    grep d.me {some path}
+
+3. Exponent operator "^" will search for the word that start with that string
+    a. searching all lines that start with "lion"
+    grep ^lion {some path}
+
+4. Dollar sign "$" will search for the words that end with that string
+    a. searching all words ending with "apples"
+    grep apples$
