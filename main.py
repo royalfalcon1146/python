@@ -277,3 +277,14 @@ with open('myCsvFile.csv', 'w') as file:
 
 #! Regular Expressions | Regex
 #* They allow us to search a text for strings matching a specific pattern
+#* Make sure to go the regular expressions text file to understand how to use them
+
+import re
+
+myText = "here, there, where, stare"
+
+result = re.search(r"ere", myText) #here it searches for only one object
+result = re.findall(r"ere", myText) #this outputs a list of every place that this pattern was mentioned
+result = re.sub(r"ere", "new replacement", myText)
+
+result = re.search(r"ere", myText, re.IGNORECASE) #here the ignorecase makes it that it doesn't care if the pattern is lowercase or uppercase

@@ -1,5 +1,8 @@
 Regular Expressions | Regex
 They allow us to search a text for strings matching a specific pattern
+The commands can be found here: https://www.w3schools.com/python/python_regex.asp
+You can test the commands here: https://regex101.com/ 
+Note: Those commands only work on linux terminals, like "grep", the string methods tho work in python and in linux terminal 
 
 1. Searching for a document
     a. Case sensitive.
@@ -7,14 +10,50 @@ They allow us to search a text for strings matching a specific pattern
     b. Not case sensitive
     grep -i {string} {path}
 
-2. The dot, the dot includes any letter that matches it 
-    a. here we are searching for words ending with "me" and starting with "d" and it is a 4 letter word 
+2. The dot, the dot includes any letter that matches it
+    a. here we are searching for instances ending with "me" and starting with "d" and it is a 4 letter word 
     grep d.me {some path}
 
 3. Exponent operator "^" will search for the word that start with that string
-    a. searching all lines that start with "lion"
+    a. searching every instance that start with "lion"
     grep ^lion {some path}
 
 4. Dollar sign "$" will search for the words that end with that string
-    a. searching all words ending with "apples"
-    grep apples$
+    a. searching every instance ending with "apples"
+    grep apples$ {path}
+
+5. Square brackets are for listing character matches we want, make sure to specify if it is upper or lower case, this can be used for numbers too 
+    a. Search for an instance that start with "a" or "b"
+    grep ^[AaBb] {path}
+    b. Search for an instance that start with letters from "a" to "z"
+    grep ^[a-z] {path}
+
+6. Pipe is for search for two patterns, like saying if there is this or that
+    a. search for apples or oranges
+    grep apples|oranges {path}
+
+7. Star sign is for any number of characters in between, putting a dot before it, includes spaces, putting square brackets would be better if you are looking for a word
+    a. searching for a word beginning with "ad" and ending with "ment"
+    grep ad[a-zA-Z]*ment {path}
+    b. search for a phrase beginning with "al" and ending with "est"
+    grep al.*est
+
+8. Plus sign is for one more occurences of something
+    a. searching a pattern with "ool"
+    grep o+l {path}
+
+9. Question mark is for zero or one occurence of a character
+    a. search for the pattern "each" but with the possibility of "t" in the beginning
+    grep t?each {path}
+
+10. Backslash "\" is used for including special characters, or special sequences, her I put star sign to includea continuous pattern
+    a. search for a dot
+    grep \. {path}
+    b. search for only alphaneumerical characters including underscores
+    grep \w* {path}
+    c. search for only digits
+    grep \d* {path}
+    d. search for white space 
+    grep \s* {path}
+    e. search where no digits exist
+    grep \D* {path}
