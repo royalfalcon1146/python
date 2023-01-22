@@ -286,5 +286,13 @@ myText = "here, there, where, stare"
 result = re.search(r"ere", myText) #here it searches for only one object
 result = re.findall(r"ere", myText) #this outputs a list of every place that this pattern was mentioned
 result = re.sub(r"ere", "new replacement", myText)
+result = re.split(r"[,]", "Albraa,18,5370623850") #here split is for spliting the string into a list by using the comma as a splitter, the list will contain "Albraa", "18", and "5370623850"
 
 result = re.search(r"ere", myText, re.IGNORECASE) #here the ignorecase makes it that it doesn't care if the pattern is lowercase or uppercase
+
+#! Capturing the information with regex
+#Capturing groups: protions of the pattern that are enclosed in parentheses
+result = re.search(r"[[](\d*)[]]", "[12345") #* here the things in the paranthesis will be caught and can be used 
+result[0] #here it outputs the match only
+result[1] #here it will output the first captured group if it exists
+result[2] #here it will output the second captured thing if it exists

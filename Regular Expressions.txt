@@ -57,3 +57,15 @@ Note: Those commands only work on linux terminals, like "grep", the string metho
     grep \s* {path}
     e. search where no digits exist
     grep \D* {path}
+    f. search for a pattern that isnt joined to anything, you basically put them in between "\b"
+    grep \b\w{5}\b {path}
+
+11. Curly brackets is for repition
+    a. searching for a 5 digit number
+    grep \d{5} {path}
+    b. search for a 5 to 10 digit number
+    grep \d{5, 10} {path}
+    c. search for a 5 or more digit number, putting comma after the 5
+    grep \d{5,}
+    d. search for a number from 0 up to 20 digits
+    grep \d{,20}
