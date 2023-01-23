@@ -1,2 +1,3 @@
-# There is no tomorrow!!!
-#! Waiting for a challenge!
+#
+#! There is no tomorrow!!!
+#! Don't wait for a chance!!!

@@ -285,7 +285,7 @@ myText = "here, there, where, stare"
 
 result = re.search(r"ere", myText) #here it searches for only one object
 result = re.findall(r"ere", myText) #this outputs a list of every place that this pattern was mentioned
-result = re.sub(r"ere", "new replacement", myText)
+result = re.sub(r"ere", "new replacement", myText) #this subtitutes something for another
 result = re.split(r"[,]", "Albraa,18,5370623850") #here split is for spliting the string into a list by using the comma as a splitter, the list will contain "Albraa", "18", and "5370623850"
 
 result = re.search(r"ere", myText, re.IGNORECASE) #here the ignorecase makes it that it doesn't care if the pattern is lowercase or uppercase
@@ -296,3 +296,16 @@ result = re.search(r"[[](\d*)[]]", "[12345") #* here the things in the paranthes
 result[0] #here it outputs the match only
 result[1] #here it will output the first captured group if it exists
 result[2] #here it will output the second captured thing if it exists
+
+#! Managing Data and Processes
+#* I/O streams: the basic mechanism for performing input and output operations in your programs
+#* Standard input: STDIN
+#* Standard output: STDOUT
+#* Standard error: STDERR
+#* Shell: a command-line interface used to interact with your operating system, it is also where the python programs get executed
+#* Command-line arguments: parameters that are passed to a program when it's started
+#* Exit status: the value returned by a program to the shell
+import sys
+os.environ.get("HOME", "") #accessing environment variables, if the variable doesnt have a value, it will print nothing, the "get" method works with dictionaries too
+
+print(sys.argv) #this will output any arguments when executing the file
