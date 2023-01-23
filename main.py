@@ -308,4 +308,17 @@ result[2] #here it will output the second captured thing if it exists
 import sys
 os.environ.get("HOME", "") #accessing environment variables, if the variable doesnt have a value, it will print nothing, the "get" method works with dictionaries too
 
-print(sys.argv) #this will output any arguments when executing the file
+print(sys.argv) #this will output any arguments that are passed when executing the file
+#in linux when you execute this file, put parameters after it like this: ./myfile.py Albraa Alsakor 18 etc
+#the parameters are separated by spaces :)
+
+#! Running System Commands in Python
+import subprocess
+subprocess.run(["the command here"]) #the first quotations is for the commands, if you wanna pass things into it, put a comma then another quotations
+subprocess.run(["some command"], capture_output=True) #here the capture_output will return the reply of the system 
+print(result.STDOUT) #this is where the capture_output stores the reply, make sure to pass the decode().split() to decode it in utf8
+print(result.STDERR) #this is where the error is stored when using the capture_output
+subprocess.run(['sleep', '2']) #the sleep makes the system wait for the number of seconds listed after it
+subprocess.run(['date']) #gives the date
+result = subprocess.run(["some command"])
+result.returncode #this outputs the exit status
