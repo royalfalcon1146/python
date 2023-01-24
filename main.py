@@ -85,6 +85,8 @@ for n in myDictionary:
 
 myDictionary.keys() #this method gives you the names of the fields in the dictionary
 myDictionary.values() #this method gives you the values only in the dictionary 
+myDictionary[somekey] = myDictionary.get(somekey, 0) +1 #*this here sets a new key in the dictionary called "somekey" and passes the 0 value to it, but the +1 at the end adds to the value
+myDictionary[somekey] = myDictionary.get(somekey, 0) +1 #*this adds again to the value, making the value equal to 2, this is valuable when you have an empty list and you scan through a file
 
 nestedDict = {
       "class1" : {
@@ -308,10 +310,10 @@ result[2] #here it will output the second captured thing if it exists
 import sys
 os.environ.get("HOME", "") #accessing environment variables, if the variable doesnt have a value, it will print nothing, the "get" method works with dictionaries too
 
-print(sys.argv) #this will output any arguments that are passed when executing the file
+print(sys.argv) #this will output list of all arguments that are passed when executing the file
 #in linux when you execute this file, put parameters after it like this: ./myfile.py Albraa Alsakor 18 etc
 #the parameters are separated by spaces :)
-
+ 
 #! Running System Commands in Python
 import subprocess
 subprocess.run(["the command here"]) #the first quotations is for the commands, if you wanna pass things into it, put a comma then another quotations
