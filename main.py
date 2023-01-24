@@ -324,3 +324,46 @@ subprocess.run(['sleep', '2']) #the sleep makes the system wait for the number o
 subprocess.run(['date']) #gives the date
 result = subprocess.run(["some command"])
 result.returncode #this outputs the exit status
+
+#! Testing in Python
+#* Software testing: the process of evaluating computerc ode to determine whether or not it does what you expect it to do
+#* Tests can help make good code better
+#* Unit tests: used to verify that small, isolated parts of a program are correct
+#* Edge cases: inputs to our code that produce unexpected results found at the extreme ends of ranges of input the programs will work with
+#* On the other hand, integration tests verify that the interactions between the different pieces
+#*    of code in integrated environments are working the way we expect them to
+
+from myfile import something #this here imports "something" if it is a variable, class, or function from "myfile"
+
+import unittest #module for testing scripts
+
+class TestSomething(unittest.TestCase):
+      def test_basic(self):
+            testcase = "something to test" #the input 
+            expected = "the expected output" #the output you expect out of the function
+            self.assertEqual(some_function(testcase), expected) #running the test
+      #? note: you can write another function, which will be considered as another test :)
+      def test_another(self):
+            self.assertRaises(ValueError, some_function, "value to pass", "second argument if there is one")
+            #this here expects an error when giving this arguments, if there is no error, it will give a fail
+
+unittest.main() #this is how you run the test
+
+#* White-Box Testing: sometimes called clear-box or transparent testing relies on the 
+#*    test creator's knowledge of the software being tested to construct the test cases
+
+#* Black-Box Testing: written with an awareness of what the program 
+#*    is supposed to do - its requirements or specifications - but not how it does it
+
+try: #the try block tries executing the code in it
+      pass
+except: #the except block is run if the "try" block gives an error
+      pass
+
+raise Exception("text to output") #this outputs an exception to the user
+raise TypeError("text to output") #this outputs a typeerror to the user
+raise ValueError("text to output") #this outputs a valueerror to the user
+
+assert {condition}, "text to output" 
+#this assertion is like an if statement, if the condition is true, it will continue with the code
+#if not true, then it will output that text in an AssertionError
