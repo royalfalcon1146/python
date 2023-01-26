@@ -2,6 +2,9 @@
 #In programming, recursion is a way of doing a repetitive task by having a function call itself.
 #Recursion in python can only happen 1000 times in each function when called.
 
+#!usr/bin/python3
+#the comment above is needed if you are executing on linux
+
 n = 1
 m = 8
 string = "I am a genius"
