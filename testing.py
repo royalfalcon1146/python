@@ -1,5 +1,3 @@
-#
-#! There is no tomorrow!!!
-#! Don't wait for a chance!!!
-
-print("hello world")
+#!/usr/bin/env python3
+#! THERE IS NO TOMORROW!!!
+#! DON'T WAIT FOR A CHANCE!!!

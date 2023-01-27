@@ -247,9 +247,11 @@ for row in csv_f: # the row here is a list, it has the values all in each row of
       print(name) #this will print the first column of that row
       pass
 
+#! Creating a New CSV File
+
 myList = [["Name", "Age", "Phone"], ["Albraa", "18", "5370623850"], ["Hanan", "20", "None"]] #using this list, we will make a new csv file
 
-with open("myCsvFile.csv", "w") as file: #! Creating a New CSV File
+with open("myCsvFile.csv", "w", newline='') as file: 
       writer = csv.writer(file)
       writer.writerow(["Name", "Age", "Phone"]) #use with lists
       writer.writerow(["Albraa", "18", "5370623850"])
@@ -280,7 +282,7 @@ MyDictList = [ #the list of dictionaries we are going to use to make a new csv f
 
 keys = ["name", "age", "phone"] #the first row
 
-with open('myCsvFile.csv', 'w') as file:
+with open('myCsvFile.csv', 'w', newline='') as file:
       writer = csv.DictWriter(file, fieldnames = keys) #assigning the file and the first column 
       writer.writeheader() #creates first line of the file by using the our fieldnames
       writer.writerows(myDictList) #writes the rows
@@ -304,8 +306,8 @@ result = re.search(r"ere", myText, re.IGNORECASE) #here the ignorecase makes it 
 #Capturing groups: protions of the pattern that are enclosed in parentheses
 result = re.search(r"[[](\d*)[]]", "[12345") #* here the things in the paranthesis will be caught and can be used 
 result[0] #here it outputs the match only
-result[1] #here it will output the first captured group if it exists
-result[2] #here it will output the second captured thing if it exists
+result.group(1) #here it will output the first captured group if it exists
+result.group(2) #here it will output the second captured thing if it exists
 
 #! Managing Data and Processes
 #* I/O streams: the basic mechanism for performing input and output operations in your programs
