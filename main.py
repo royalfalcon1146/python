@@ -71,7 +71,9 @@ for num, obj in enumerate(myList):
       
 myList = [ x*3 for x in range(1,101)] #here instead of making the loop, it made it shorter, here it takes x*3 of every number from the range.
 myList = [ x for x in range(1,101) if x%3 == 0] #here it does the same thing except there is a condition met.
-      
+
+#! Dictionaries
+
 myDictionary = { #This is a dictionary, in a dictionary you access things with their keys/values
       "name": "Albraa",
       "age": 18,
@@ -90,7 +92,10 @@ myDictionary.keys() #this method gives you the names of the fields in the dictio
 myDictionary.values() #this method gives you the values only in the dictionary 
 myDictionary[somekey] = myDictionary.get(somekey, 0) +1 #*this here sets a new key in the dictionary called "somekey" and passes the 0 value to it, but the +1 at the end adds to the value
 myDictionary[somekey] = myDictionary.get(somekey, 0) +1 #*this adds again to the value, making the value equal to 2, this is valuable when you have an empty list and you scan through a file
-
+import operator
+sorted(myDictionary.items(), key=operator.itemgetter(0)) #sorting the dictionary based on the keys
+sorted(fruit.items(), key=operator.itemgetter(1)) #sorting it based on the value, in ascending order
+sorted(fruit.items(), key = operator.itemgetter(1), reverse=True) #sroting it based on the value, in descending order
 nestedDict = {
       "class1" : {
             "math": 92,
