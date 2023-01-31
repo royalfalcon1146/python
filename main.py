@@ -170,6 +170,9 @@ now #outputs the date and time together
 now.year #this shows which year it is
 now.month #this shows which month it is
 
+import time
+time.sleep(10) #this makes the program wait/sleep 10 secs before doing something
+
 #Event Class: contains the date when the event happened, the name of the machine where it happened, the user involved, and the event type.
 
 
@@ -333,7 +336,6 @@ subprocess.run(["the command here"]) #the first quotations is for the commands, 
 subprocess.run(["some command"], capture_output=True) #here the capture_output will return the reply of the system 
 print(result.STDOUT) #this is where the capture_output stores the reply, make sure to pass the decode().split() to decode it in utf8
 print(result.STDERR) #this is where the error is stored when using the capture_output
-subprocess.run(['sleep', '2']) #the sleep makes the system wait for the number of seconds listed after it
 subprocess.run(['date']) #gives the date
 result = subprocess.run(["some command"])
 result.returncode #this outputs the exit status
