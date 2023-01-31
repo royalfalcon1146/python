@@ -323,7 +323,8 @@ import sys
 os.environ.get("HOME", "") #accessing environment variables, if the variable doesnt have a value, it will print nothing, the "get" method works with dictionaries too
 
 print(sys.argv) #this will output list of all arguments that are passed when executing the file
-#in linux when you execute this file, put parameters after it like this: ./myfile.py Albraa Alsakor 18 etc
+#*in linux when you execute this file, put parameters after it like this: ./myfile.py Albraa Alsakor 18 "argument in quotes because it has spaces"
+#*in windows you can execute it like this: python myfile.py "argument, doesnt have to be in quotes unless it has spaces" "another argument"
 #the parameters are separated by spaces :)
  
 #! Running System Commands in Python
