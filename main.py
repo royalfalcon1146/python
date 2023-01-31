@@ -180,6 +180,8 @@ file.readline() #this outputs a single line from the file, if it is called again
 file.read() #this outputs everything in the file
 file.close() #it is a good habbit to close files since it takes ram to keep them open and prevents other programs from using them
 
+file_contents = file.readlines() #this stores every line in a list to access each one individually
+
 for line in file: pass #this does something with every line, maybe print or anything you like
 
 with open(r"C:\Users\ALBARAA.DESKTOP-87EJ24R\Programming\Tests Folder\myTxtFile.txt") as file: #using the "with" here, we don't have to worry about closing the file, it closes it after it does the tasks
