@@ -65,10 +65,10 @@ A, B, C = result # Here you are assigning the variables to the corresponding str
 
 for x in myList:
       print(x) #here with a loop you can get every object in the list and do something with it
-      
+
 for num, obj in enumerate(myList):
       print(num + "-" + obj) #here the first variable takes the index number of the object and the second one takes the value of the object itself.
-      
+
 myList = [ x*3 for x in range(1,101)] #here instead of making the loop, it made it shorter, here it takes x*3 of every number from the range.
 myList = [ x for x in range(1,101) if x%3 == 0] #here it does the same thing except there is a condition met.
 
@@ -78,7 +78,7 @@ myDictionary = { #This is a dictionary, in a dictionary you access things with t
       "name": "Albraa",
       "age": 18,
       "phone": 5370623850
-} 
+}
 myDictionary["name"] #This accesses the value of "name" in the dictionary
 myDictionary["name"] = "Ahmad" #This changes the value of "name" in dictionary
 myDictionary["newKey"] = 18 #here you made a new field with a value in it
@@ -89,7 +89,7 @@ for n in myDictionary:
       print(myDictionary[n]) #this prints the value of that field in the dictionary
 
 myDictionary.keys() #this method gives you the names of the fields in the dictionary
-myDictionary.values() #this method gives you the values only in the dictionary 
+myDictionary.values() #this method gives you the values only in the dictionary
 myDictionary[somekey] = myDictionary.get(somekey, 0) +1 #*this here sets a new key in the dictionary called "somekey" and passes the 0 value to it, but the +1 at the end adds to the value
 myDictionary[somekey] = myDictionary.get(somekey, 0) +1 #*this adds again to the value, making the value equal to 2, this is valuable when you have an empty list and you scan through a file
 import operator
@@ -166,7 +166,7 @@ random.randint(1, 10) #this gives you a random number between 1 and 10
 
 import datetime #datetime module
 now = datetime.datetime.now() #this datetime.datetime.now() gives the date and time of today
-now #outputs the date and time together 
+now #outputs the date and time together
 now.year #this shows which year it is
 now.month #this shows which month it is
 
@@ -256,7 +256,7 @@ for row in csv_f: # the row here is a list, it has the values all in each row of
 
 myList = [["Name", "Age", "Phone"], ["Albraa", "18", "5370623850"], ["Hanan", "20", "None"]] #using this list, we will make a new csv file
 
-with open("myCsvFile.csv", "w", newline='') as file: 
+with open("myCsvFile.csv", "w", newline='') as file:
       writer = csv.writer(file)
       writer.writerow(["Name", "Age", "Phone"]) #use with lists
       writer.writerow(["Albraa", "18", "5370623850"])
@@ -288,7 +288,7 @@ MyDictList = [ #the list of dictionaries we are going to use to make a new csv f
 keys = ["name", "age", "phone"] #the first row
 
 with open('myCsvFile.csv', 'w', newline='') as file:
-      writer = csv.DictWriter(file, fieldnames = keys) #assigning the file and the first column 
+      writer = csv.DictWriter(file, fieldnames = keys) #assigning the file and the first column
       writer.writeheader() #creates first line of the file by using the our fieldnames
       writer.writerows(myDictList) #writes the rows
 
@@ -309,7 +309,7 @@ result = re.search(r"ere", myText, re.IGNORECASE) #here the ignorecase makes it 
 
 #! Capturing the information with regex
 #Capturing groups: protions of the pattern that are enclosed in parentheses
-result = re.search(r"[[](\d*)[]]", "[12345") #* here the things in the paranthesis will be caught and can be used 
+result = re.search(r"[[](\d*)[]]", "[12345") #* here the things in the paranthesis will be caught and can be used
 result[0] #here it outputs the match only
 result.group(1) #here it will output the first captured group if it exists
 result.group(2) #here it will output the second captured thing if it exists
@@ -329,11 +329,11 @@ print(sys.argv) #this will output list of all arguments that are passed when exe
 #*in linux when you execute this file, put parameters after it like this: ./myfile.py Albraa Alsakor 18 "argument in quotes because it has spaces"
 #*in windows you can execute it like this: python myfile.py "argument, doesnt have to be in quotes unless it has spaces" "another argument"
 #the parameters are separated by spaces :)
- 
+
 #! Running System Commands in Python
 import subprocess
 subprocess.run(["the command here"]) #the first quotations is for the commands, if you wanna pass things into it, put a comma then another quotations
-subprocess.run(["some command"], capture_output=True) #here the capture_output will return the reply of the system 
+subprocess.run(["some command"], capture_output=True) #here the capture_output will return the reply of the system
 print(result.STDOUT) #this is where the capture_output stores the reply, make sure to pass the decode().split() to decode it in utf8
 print(result.STDERR) #this is where the error is stored when using the capture_output
 subprocess.run(['date']) #gives the date
@@ -354,7 +354,7 @@ import unittest #module for testing scripts
 
 class TestSomething(unittest.TestCase):
       def test_basic(self):
-            testcase = "something to test" #the input 
+            testcase = "something to test" #the input
             expected = "the expected output" #the output you expect out of the function
             self.assertEqual(some_function(testcase), expected) #running the test
       #? note: you can write another function, which will be considered as another test :)
@@ -364,10 +364,10 @@ class TestSomething(unittest.TestCase):
 
 unittest.main() #this is how you run the test
 
-#* White-Box Testing: sometimes called clear-box or transparent testing relies on the 
+#* White-Box Testing: sometimes called clear-box or transparent testing relies on the
 #*    test creator's knowledge of the software being tested to construct the test cases
 
-#* Black-Box Testing: written with an awareness of what the program 
+#* Black-Box Testing: written with an awareness of what the program
 #*    is supposed to do - its requirements or specifications - but not how it does it
 
 try: #the try block tries executing the code in it
@@ -379,6 +379,6 @@ raise Exception("text to output") #this outputs an exception to the user
 raise TypeError("text to output") #this outputs a typeerror to the user
 raise ValueError("text to output") #this outputs a valueerror to the user
 
-assert {condition}, "text to output" 
+assert {condition}, "text to output"
 #this assertion is like an if statement, if the condition is true, it will continue with the code
 #if not true, then it will output that text in an AssertionError
