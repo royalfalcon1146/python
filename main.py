@@ -341,7 +341,7 @@ result = subprocess.run(["some command"])
 result.returncode #this outputs the exit status
 
 #! Testing in Python
-#* Software testing: the process of evaluating computerc ode to determine whether or not it does what you expect it to do
+#* Software testing: the process of evaluating computer code to determine whether or not it does what you expect it to do
 #* Tests can help make good code better
 #* Unit tests: used to verify that small, isolated parts of a program are correct
 #* Edge cases: inputs to our code that produce unexpected results found at the extreme ends of ranges of input the programs will work with
