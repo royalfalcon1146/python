@@ -382,3 +382,5 @@ raise ValueError("text to output") #this outputs a valueerror to the user
 assert {condition}, "text to output"
 #this assertion is like an if statement, if the condition is true, it will continue with the code
 #if not true, then it will output that text in an AssertionError
+
+#! THREADS! PARALLEL PROCESSING!
