@@ -384,3 +384,20 @@ assert {condition}, "text to output"
 #if not true, then it will output that text in an AssertionError
 
 #! THREADS! PARALLEL PROCESSING!
+#? Importig the module
+#* notice that this module doesnt need downloading
+import concurrent.futures
+
+#? Any function
+def my_function():
+      print("This is a print from my function")
+
+#? Using ThreadPoolExecutor to do the tasks in the background and with multiple threads, this makes this so fast
+#* notice that here we used "with" so that when it is done, it shuts down the executor variable
+with concurrent.futures.ThreadPoolExecutor() as executor:
+      executor.submit(my_function, argument_here_if_needed) #* used if you have one argument to pass or run the function
+      executor.map(my_function, list) #* used if you have a list of arguments to pass
+
+#* when calling ThreadPoolExecutor(), in the brackets you can set the max workers, basically max cpu cores to use
+#* like this: ThreadPoolExecutor(max_workers=5)
+#* if it is left empty, then it will use as much as the number of cores the cpu has
