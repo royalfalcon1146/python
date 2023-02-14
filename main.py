@@ -401,3 +401,12 @@ with concurrent.futures.ThreadPoolExecutor() as executor:
 #* when calling ThreadPoolExecutor(), in the brackets you can set the max workers, basically max cpu cores to use
 #* like this: ThreadPoolExecutor(max_workers=5)
 #* if it is left empty, then it will use as much as the number of cores the cpu has
+
+#! Python debugging and troubleshooting
+#? Memory Profiler: write the following in terminal
+#* python3 -m memory profiler <name of the python file>
+
+#? Debugging:
+#* pdb3 <python file> <any parameters that the file expects>
+#* in pdb now
+#* continue #if you found no error yet
