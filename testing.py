@@ -2,6 +2,8 @@
 #! THERE IS NO TOMORROW!!!
 #! DON'T WAIT FOR A CHANCE!!!
 
+# for FILE in * ; do sudo python3 ~/Documents/testing/testing.py $FILE ; done
+
 from PIL import Image
 import subprocess
 import os
