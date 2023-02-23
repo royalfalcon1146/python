@@ -411,3 +411,10 @@ with concurrent.futures.ThreadPoolExecutor() as executor:
 #* in pdb now
 #* continue #if you found no error yet
 
+#! Images!!!
+#? pip3 install pillow
+from PIL import Image
+my_image = Image.open(r"file name or location") #* storing your image in a variable to edit it
+
+changed_image = my_image.resize((number, number)) #* resizes the image
+changed_image = my_image.rotate(number)
