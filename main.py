@@ -416,5 +416,8 @@ with concurrent.futures.ThreadPoolExecutor() as executor:
 from PIL import Image
 my_image = Image.open(r"file name or location") #* storing your image in a variable to edit it
 
+print(image.width, image.height, image.size, image.info, image.format) #* self explanatory, basically prints the description of the image
+
 changed_image = my_image.resize((number, number)) #* resizes the image
 changed_image = my_image.rotate(number)
+changed_image.save("my_changed_image.png")
