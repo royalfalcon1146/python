@@ -5,8 +5,13 @@
 from PIL import Image
 import subprocess
 import os
-
+import sys
 # /opt/icons
 # /home/student-04-46d2e4258652/images
 
-my_process = subprocess.run("cd /home/student-04-46d2e4258652/images", capture_output=True)
+my_filename = sys.argv[1]
+
+my_image = Image.open(my_filename)
+new_image = my_image.resize((128,128))
+new_image = new_image.rotate(270)
+new_image.save(fr"/opt/icons{my_filename}.jpeg")
