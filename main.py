@@ -433,3 +433,15 @@ with open(r"my_json_file.json", "w") as file:
 with open(r"my_json_file.json", "r") as file:
       my_variable = json.load(file) #? Here we are retreiving the data in the json file and storing it in "my_variable"
       
+#! Requests
+
+import requests
+
+response = requests.get("url") #? this will send an api request to the url
+
+response.text[:300] #? This will output the first 300 characters from the html code
+
+response.ok #? This is a boolean, it will output true if the request got accepted
+
+response.status_code #? This will output the html response code
+
