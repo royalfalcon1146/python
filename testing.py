@@ -17,3 +17,4 @@ my_image = Image.open(my_filename)
 new_image = my_image.resize((128,128))
 new_image = new_image.rotate(270)
 new_image.save(fr"/opt/icons{my_filename}.jpeg")
+

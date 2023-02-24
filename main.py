@@ -421,3 +421,15 @@ print(image.width, image.height, image.size, image.info, image.format) #* self e
 changed_image = my_image.resize((number, number)) #* resizes the image
 changed_image = my_image.rotate(number)
 changed_image.save("my_changed_image.png")
+
+#! JSON
+import json #? importing json module, notice that this is probably downloaded with python, no need to download
+
+my_list = ["apple", "orange", "strawberry"] #* the array / list for json, notice that it can be filled with anything, from variables to dictionaries
+
+with open(r"my_json_file.json", "w") as file:
+      json.dump(my_list, file, indent=2) #? Here you are putting / dumping information into the json file, the indent is for making it look better
+
+with open(r"my_json_file.json", "r") as file:
+      my_variable = json.load(file) #? Here we are retreiving the data in the json file and storing it in "my_variable"
+      
