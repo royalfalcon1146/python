@@ -451,6 +451,15 @@ from email.message import EmailMessage
 
 message = EmailMessage()
 
-message['From'] = 'email@domain.com'
-message['To'] = 'email@domain.com'
-message['Subject'] = 'Some sentence here or title for the subject'
+message['From'] = 'email@domain.com' #? Sender email
+message['To'] = 'email@domain.com' #? Receiver email
+message['Subject'] = 'Some sentence here or title for the subject' #? Subject of the email
+
+messagebody= """Dear Ms. Kerry #? the body of the message, we use here 3 double quotes because it is a multiple line thing
+
+bla bla bla bla bla bla.
+
+Best Regards,
+The genius programmer"""
+
+message.set_content(messagebody) #? assigning the body variable in the email message
