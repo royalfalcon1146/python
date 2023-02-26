@@ -445,3 +445,12 @@ response.ok #? This is a boolean, it will output true if the request got accepte
 
 response.status_code #? This will output the html response code
 
+#! Emails
+
+from email.message import EmailMessage
+
+message = EmailMessage()
+
+message['From'] = 'email@domain.com'
+message['To'] = 'email@domain.com'
+message['Subject'] = 'Some sentence here or title for the subject'
