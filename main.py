@@ -450,6 +450,9 @@ response.status_code #? This will output the html response code
 from tkinter import * #? Importing the module
 
 mywindow = Tk() #? Setting the variable as our popup message
-mywindow.title("Title of pop here")
+mywindow.title("Title of popup here")
 mywindow.geometry("400x300") #? Size of the popup window
 text = Label(mywindow, text= "Text you want to display")
+text.pack() #? putting the text in the message box
+
+mywindow.mainloop() #? launching it
