@@ -1,13 +1,8 @@
-#!/usr/bin/env python3
-#! THERE IS NO TOMORROW!!!
-#! DON'T WAIT FOR A CHANCE!!!
+import pyautogui; import time
 
-from tkinter import * #? Importing the module
+pyautogui.keyDown('ctrl')
+time.sleep(3)
+pyautogui.press('f')
+time.sleep(3)
+pyautogui.keyUp('ctrl')
 
-mywindow = Tk() #? Setting the variable as our popup message
-mywindow.title("Title of pop here")
-mywindow.geometry("400x300") #? Size of the popup window
-text = Label(mywindow, text= "Text you want to display")
-text.pack()
-
-mywindow.mainloop()
