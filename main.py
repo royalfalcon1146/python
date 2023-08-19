@@ -211,6 +211,7 @@ file_path = filedialog.askopenfilename() # this opens a file explorer for the us
 #! OS Section
 #* Use "r" before the quotes for paths pretty please
 import os
+os.system('cls')
 os.remove("my.txt") #this removes the file named "my.txt"
 os.rename("name of the file with extension", "new name.txt") #renames the file
 os.path.exists("my path or file name") #checks if the file is present
@@ -309,10 +310,10 @@ result = re.search(r"ere", myText, re.IGNORECASE) #here the ignorecase makes it 
 
 #! Capturing the information with regex
 #Capturing groups: protions of the pattern that are enclosed in parentheses
-result = re.search(r"[[](\d*)[]]", "[12345") #* here the things in the paranthesis will be caught and can be used
+result = re.search(r"[[](\d*)[]]", "[12345]") #* here the things in the paranthesis will be caught and can be used
 result[0] #here it outputs the match only
-result.group(1) #here it will output the first captured group if it exists
-result.group(2) #here it will output the second captured thing if it exists
+result[1] #here it will output the first captured thing if it exists
+result[2] #here it will output the second captured thing if it exists
 
 #! Managing Data and Processes
 #* I/O streams: the basic mechanism for performing input and output operations in your programs
