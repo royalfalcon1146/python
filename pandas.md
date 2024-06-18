@@ -23,6 +23,26 @@ myDictionary = {
 
 myPandaTable = pandas.DataFrame(myDictionary)
 ```
+Using Pandas on with MySQL
+```
+myDictionary={}
+
+Cursor.execute("show columns from tablename")
+columns = Cursor.fetchall()
+
+Cursor.execute("select * from tablename")
+tablename = Cursor.fetchall()
+
+for number,column in enumerate(columns):
+  myDictionary[column[0]]=[] 
+  for row in tablename:
+      try:
+          myDictionary[column[0]].append(int(row[number]))
+      except:
+          myDictionary[column[0]].append(row[number])
+
+myPandaTable = pandas.DataFrame(myDictionary)
+```
 
 ---
 
