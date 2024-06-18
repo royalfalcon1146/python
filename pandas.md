@@ -31,3 +31,10 @@ pandas.options.display.max_columns=None
 ```
 pandas.options.display.width=1000
 ```
+
+---
+
+### Print Pandas table but sorted by a column in descending order
+```
+print(myPandaTable.sort_values(by="Column Name" ascending=False))
+```
