@@ -19,6 +19,9 @@ myDictionary = {
 
 myPandaTable = pandas.DataFrame(myDictionary)
 ```
+
+---
+
 ### If the csv or the data is pretty large, pandas will only print some of the rows and columns unless you set its options beforehand
 ```
 pandas.options.display.max_rows=None
