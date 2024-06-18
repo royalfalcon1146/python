@@ -34,13 +34,21 @@ pandas.options.display.width=1000
 
 ---
 
+### Find all the column names in the table
+```
+print(myPandaTable.columns)
+```
+### Find the number of rows / records in the table
+```
+print(myPandaTable.count())
+```
 ### Print Pandas table but sorted by a column in descending order
 ```
 print(myPandaTable.sort_values(by="Column Name" ascending=False))
 ```
 ### Print the first 10 rows from the Pandas table.
 ```
-print(myPandaTable.head(10)
+print(myPandaTable.head(10))
 ```
 ### Print the last 10 rows from the Pandas table.
 ```
