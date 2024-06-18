@@ -38,10 +38,13 @@ pandas.options.display.width=1000
 ```
 print(myPandaTable.sort_values(by="Column Name" ascending=False))
 ```
-
 ### Print the first 10 rows from the Pandas table.
 ```
 print(myPandaTable.head(10)
+```
+### Print the last 10 rows from the Pandas table.
+```
+print(myPandaTable.tail(10))
 ```
 ### After sorting too!
 ```
