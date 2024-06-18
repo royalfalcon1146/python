@@ -10,9 +10,9 @@ myPandaTable = pandas.read_csv("csv file path")
 print(myPandaTable)
 
 ### pandas can accept also dictionaries but they have to be written in the following way:
-`myDictionary = {
+```myDictionary = {
   "Companies":["BMW","Koenigsegg","Porsche"]
   "Cars":[20,9,40]
 }
 
-myPandaTable = pandas.DataFrame(myDictionary)`
+myPandaTable = pandas.DataFrame(myDictionary)```
