@@ -6,7 +6,7 @@
 ---
 
 ### use pandas on a ready csv file then print it
-```
+```py
 myPandaTable = pandas.read_csv("csv file path")
 print(myPandaTable)
 ```
