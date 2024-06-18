@@ -1,8 +1,11 @@
 Install Pandas in the terminal
-`pip install pandas`
-
+```
+pip install pandas
+```
 Installing Matplotlib for graphs too
-`pip install matplotlib`
+```
+pip install matplotlib
+```
 
 ---
 
