@@ -1,16 +1,16 @@
-### install pandas in cmd / terminal
+### Install Pandas in the terminal
 `pip install pandas`
-### highly recommended to plot graphs: install matplotlib module too
+### Installing Matplotlib for graphs too
 `pip install matplotlib`
 
 ---
 
-### use pandas on a ready csv file then print it
+### Use pandas on a ready csv file then print it
 ```
 myPandaTable = pandas.read_csv("csv file path")
 print(myPandaTable)
 ```
-### pandas can accept also dictionaries but they have to be written in the following way:
+### Pandas can also accept dictionaries but they have to be written in the following way:
 ```
 myDictionary = {
   "Companies":["BMW","Koenigsegg","Porsche"]
@@ -27,7 +27,7 @@ myPandaTable = pandas.DataFrame(myDictionary)
 pandas.options.display.max_rows=None
 pandas.options.display.max_columns=None
 ```
-### pandas might put some columns on another line unless you set the max line character width beforehand
+### Pandas might also put some columns on another line unless you set the max line character width beforehand
 ```
 pandas.options.display.width=1000
 ```
@@ -37,4 +37,13 @@ pandas.options.display.width=1000
 ### Print Pandas table but sorted by a column in descending order
 ```
 print(myPandaTable.sort_values(by="Column Name" ascending=False))
+```
+
+### Print the first 10 rows from the Pandas table.
+```
+print(myPandaTable.head(10)
+```
+### After sorting too!
+```
+print(myPandaTable.sort_values(by="Column Name" ascending=False).head(10))
 ```
