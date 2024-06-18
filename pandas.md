@@ -23,7 +23,7 @@ myDictionary = {
 
 myPandaTable = pandas.DataFrame(myDictionary)
 ```
-Using Pandas on with MySQL
+Using Pandas with MySQL
 ```
 myDictionary={}
 
@@ -46,7 +46,7 @@ myPandaTable = pandas.DataFrame(myDictionary)
 
 ---
 
-If the csv or the data is pretty large, pandas will only print some of the rows and columns unless you set its options beforehand
+If the data is pretty large, pandas will only print some of the rows and columns unless you set its options beforehand
 ```
 pandas.options.display.max_rows=None
 pandas.options.display.max_columns=None
