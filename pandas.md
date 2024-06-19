@@ -61,6 +61,8 @@ pandas.options.display.width=1000
 
 ---
 
+## Common Functions with Pandas DataFrames
+
 Find all the column names in the table
 ```
 print(myPandaTable.columns)
@@ -84,4 +86,21 @@ print(myPandaTable.tail(10))
 After sorting too!
 ```
 print(myPandaTable.sort_values(by="Column Name" ascending=False).head(10))
+```
+
+---
+
+## Plots and Graphs
+
+Plot a graph, notice here that one of the columns should have numerical data, and the graph type could be one of the following: line, bar, barh, kde, density, area, hist, box, pie, scatter, hexbin
+```
+print(myPandaTable.plot("FirstColumnName","SecondColumnName",kind="graphType"))
+```
+If you have a large data table, you could get the first 30 rows then plot them
+```
+print(myPandaTable.head(10).plot("Companies","Cars",kind="bar"))
+```
+You could also do it after sorting
+```
+print(myPandaTable.sort_values(by="Cars", ascending=False).head(30).plot("Companies","Cars"))
 ```
