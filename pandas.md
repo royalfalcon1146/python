@@ -9,7 +9,8 @@ pip install matplotlib
 
 ---
 
-### Getting data and storing it in Pandas
+## Getting data and storing it in Pandas
+
 Use pandas on a ready csv file then print it
 ```
 myPandaTable = pandas.read_csv("csv file path")
@@ -46,7 +47,8 @@ myPandaTable = pandas.DataFrame(myDictionary)
 ```
 
 ---
-### Common Problems
+## Common Problems
+
 If the data is pretty large, pandas will only print some of the rows and columns unless you set its options beforehand
 ```
 pandas.options.display.max_rows=None
