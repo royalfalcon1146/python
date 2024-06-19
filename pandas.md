@@ -104,7 +104,11 @@ print(myPandaTable.head(10).plot("Companies","Cars",kind="bar"))
 ```
 print(myPandaTable.sort_values(by="Cars", ascending=False).head(30).plot("Companies","Cars"))
 ```
-- You could also name the x-axis and the y-axis labels in the plot
+- Naming the **x-axis and the y-axis labels** in the plot
 ```
-print(myPandaTable.plot("Companies","Cars",kind="bar").set(xlabel="my x-axis",ylabel="my y-axis"))
+print(myPandaTable.plot("Companies","Cars",kind="bar",xlabel="my x-axis",ylabel="my y-axis"))
+```
+- If you want to display a large figure with a lot of data, you could change the **figure size** and the **font size**
+```
+print(myPandaTabel.plot(figsize=(50,50),fontsize=10))
 ```
