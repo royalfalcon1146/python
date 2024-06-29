@@ -69,7 +69,15 @@ print(myPandaTable.columns)
 ```
 - Find the number of rows / records in the table
 ```
-print(myPandaTable.count())
+print(myPandaTable.index.stop)
+```
+- Print a certain row
+```
+print(myPandaTable.loc[RowNumberHere])
+```
+- Getting the value of a certain column from a row
+```
+print(myPandaTable.loc[RowNumberHere]["ColumnNameHere"])
 ```
 - Print Pandas table but sorted by a column in descending order
 ```
