@@ -14,3 +14,15 @@ myDatabase = mysql.connector.connect(
     database = "world"
 )
 ```
+- Making a cursor which is basicly used to execute commands to the mysql database
+```
+myCursor = myDatabase.cursor()
+```
+
+---
+
+- Execute a command then fetch it
+```
+myCursor.execute("command to execute here")
+myCursorAnswer = myCursor.fetchall()
+```
