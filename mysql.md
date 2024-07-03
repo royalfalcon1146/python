@@ -14,7 +14,7 @@ myDatabase = mysql.connector.connect(
     database = "world"
 )
 ```
-- Making a cursor which is basicly used to execute commands to the mysql database
+- Making a cursor which is basically used to execute commands to the mysql database
 ```
 myCursor = myDatabase.cursor()
 ```
