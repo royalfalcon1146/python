@@ -98,6 +98,15 @@ print(myPandaTable.sort_values(by="Column Name" ascending=False).head(10))
 
 ---
 
+## Editing and Adding Data to DataFrames
+- Editing a range of rows based on the indexes (0,10) at multiple columns (column1,column2) - This can be done with one row and one column
+```
+myPandaTable.loc[0:10,[column1,column2]] = [column1Value,column2Value]
+```
+
+
+---
+
 ## Plots and Graphs
 
 - Plotting a graph, notice here that one of the columns should have **numerical data**, and the **graph type** could be one of the following: **line, bar, barh, kde, density, area, hist, box, pie, scatter, hexbin**
