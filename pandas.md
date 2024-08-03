@@ -107,6 +107,12 @@ print(myPandaTable.tail(10))
 print(myPandaTable.sort_values(by="Column Name" ascending=False).head(10))
 ```
 
+- Iterrating the rows in a dataframe and getting the value of a certain column
+```
+for row in myPandaTable.iterrows():
+  row["column_name"]
+```
+
 ---
 
 ## Editing and Adding Data to DataFrames
