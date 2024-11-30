@@ -14,6 +14,7 @@ myDatabase = mysql.connector.connect(
     database = "world"
 )
 ```
+
 - Making a cursor which is basically used to execute commands to the mysql database
 ```
 myCursor = myDatabase.cursor()
@@ -25,4 +26,9 @@ myCursor = myDatabase.cursor()
 ```
 myCursor.execute("command to execute here")
 myCursorAnswer = myCursor.fetchall()
+```
+
+- If you edit a table / database, you need to commit changes with
+```
+myDatabase.commit()
 ```
