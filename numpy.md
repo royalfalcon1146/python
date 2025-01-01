@@ -1,5 +1,3 @@
-## Requirements
-
 - Installing the module in the OS terminal
 ```
 pip install numpy
@@ -25,3 +23,4 @@ myArray = numpy.array([1,2,3,4,5],[5,9,2,7,8],[9,8,3,6,4])
 ```
 print(myArray.ndim)
 ```
+>>>>>>> 0948e31e70c21589e485af00903cc984069392b6
