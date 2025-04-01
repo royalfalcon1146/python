@@ -7,6 +7,8 @@ pip install mysql-connector-python
 
 - Connecting to the database
 ```
+import mysql.connector
+
 myDatabase = mysql.connector.connect(
     host = "localhost",
     user = "root",
