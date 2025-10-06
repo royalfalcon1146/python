@@ -24,7 +24,6 @@ myArray = numpy.array([1,2,3,4,5],[5,9,2,7,8],[9,8,3,6,4])
 ```
 
 ## Array Attributes
-
-- **ndarray.ndim**
--   Number of dimensions in the array.
-- 
+| Function | Description |
+-
+| .ndim | number of axes / dimensions of the array |
