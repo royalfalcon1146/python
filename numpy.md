@@ -1,3 +1,7 @@
+# NumPy
+
+## Installing and Importing
+
 - Installing the module in the OS terminal
 ```
 pip install numpy
@@ -12,7 +16,7 @@ import numpy
 
 ## Basics
 
-- Making a one,two, and three dimensional arrays respectively
+- Making a one, two, and three dimensional arrays respectively
 ```
 myArray = numpy.array([1,2,3,4,5])
 myArray = numpy.array([1,2,3,4,5],[5,4,3,2,1])
