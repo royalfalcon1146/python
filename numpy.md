@@ -23,8 +23,7 @@ myArray = numpy.array([1,2,3,4,5],[5,4,3,2,1])
 myArray = numpy.array([1,2,3,4,5],[5,9,2,7,8],[9,8,3,6,4])
 ```
 
-- Finding the dimensions of an array
-```
-print(myArray.ndim)
-```
->>>>>>> 0948e31e70c21589e485af00903cc984069392b6
+## Array Attributes
+
+- **ndarray.ndim**: Number of dimensions in the array.
+- 
