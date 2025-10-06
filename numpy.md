@@ -39,7 +39,7 @@ myArray = numpy.array([
 ## Array Creation
 
 - Make an array full of zeros, made up of 2 lists with 4 zeros each
-`numpy.zeros((2,4))`
+```numpy.zeros((2,4))```
 
 - Make an array full of ones
-`numpy.ones((3,4))`
+```numpy.ones((3,4))```
