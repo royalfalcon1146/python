@@ -47,3 +47,24 @@ numpy.zeros((2,4))
 ```
 numpy.ones((3,4))
 ```
+
+- Make an array with a specific **type**
+```
+numpy.array([1,2,3,4],dtype=int)
+```
+
+- Make an array with a specific **sequence**
+```
+numpy.arange(sequenceStart,sequenceEnd,step)
+numpy.arange(12) # [0,1,2,3,4,5,6,7,8,9,10,11]
+numpy.arange(10, 30, 5) # [10, 15, 20, 25]
+```
+
+- `reshape` function, which changes how an array is shaped
+```
+numpy.arange(12).reshape(4, 3)
+# [[ 0  1  2]
+#  [ 3  4  5]
+#  [ 6  7  8]
+#  [ 9 10 11]]
+```
